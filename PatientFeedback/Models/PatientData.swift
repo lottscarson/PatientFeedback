@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PatientData: Decodable {
+struct PatientData: Decodable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case id, diagnosis
         case patientName = "patient"

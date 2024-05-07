@@ -79,6 +79,7 @@
 		D274328C2BE9D8B70047254E /* DoctorExplainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorExplainView.swift; sourceTree = "<group>"; };
 		D274328E2BEA10980047254E /* DiagnosisThoughtsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisThoughtsView.swift; sourceTree = "<group>"; };
 		D27432902BEA120D0047254E /* ResponsesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsesView.swift; sourceTree = "<group>"; };
+		D27432922BEA24B70047254E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,13 +139,14 @@
 		D27243392BE94EAB00AC0473 /* PatientFeedback */ = {
 			isa = PBXGroup;
 			children = (
+				D27432922BEA24B70047254E /* Info.plist */,
+				D272433A2BE94EAB00AC0473 /* PatientFeedbackApp.swift */,
 				D274328B2BE9D3590047254E /* Views */,
 				D27243642BE94F5A00AC0473 /* ViewModel */,
 				D272436D2BE9510200AC0473 /* Models */,
 				D27243822BE96EF500AC0473 /* Networking */,
 				D257BEDC2BE9C2EE00ADFDC5 /* Extensions */,
 				D27243702BE952C200AC0473 /* Data */,
-				D272433A2BE94EAB00AC0473 /* PatientFeedbackApp.swift */,
 				D272433E2BE94EB600AC0473 /* Assets.xcassets */,
 				D27243402BE94EB600AC0473 /* Preview Content */,
 			);
@@ -543,6 +545,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PatientFeedback/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PatientFeedback/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -571,6 +574,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PatientFeedback/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PatientFeedback/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

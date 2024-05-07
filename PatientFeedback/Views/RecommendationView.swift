@@ -73,10 +73,6 @@ struct RecommendationView: View {
             }
 
             Spacer()
-
-        }
-        .onAppear {
-            viewModel.getPatientData()
         }
         .navigationBarTitle("Feedback", displayMode: .inline)
     }

@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @StateObject var viewModel = ViewModel()
+
+    @EnvironmentObject var viewModel: ViewModel
     
     var body: some View {
         NavigationView {
             RecommendationView()
         }
-        .environmentObject(viewModel)
+        .onAppear {
+            viewModel.getPatientData()
+        }
+
+
     }
 }

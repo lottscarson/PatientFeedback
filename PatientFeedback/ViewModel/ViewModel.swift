@@ -11,12 +11,12 @@ class ViewModel: ObservableObject {
     @Published var patientData: PatientData?
     private var feedback = Feedback()
     
-    func getPatientData() {
+    func getPatientData(id: String = "") {
         let networkClient = MockUtils.mockNetworkClient(file: "patient-data.json")
         let patientDataNetworkClient = PatientDataNetworkClient()
         patientDataNetworkClient.networkClient = networkClient
         
-        patientDataNetworkClient.getPatientData(id: "")
+        patientDataNetworkClient.getPatientData(id: id)
             .map({ Optional.some($0) })
             .replaceError(with: nil)
             .assign(to: &$patientData)
@@ -52,5 +52,21 @@ class ViewModel: ObservableObject {
     
     func getDiagnosisThoughts() -> String {
         return self.feedback.diagnosisThoughts
+    }
+    
+    func checkDeepLink(url: URL) -> Bool {
+        guard let deepLinkComponent = URLComponents(url: url, resolvingAgainstBaseURL: true)?.host else {
+            return false
+        }
+        
+        print(deepLinkComponent)
+        return self.checkInternalDeepLinks(component: deepLinkComponent)
+    }
+    
+    func checkInternalDeepLinks(component: String) -> Bool {
+        self.getPatientData(id: component)
+        let data = self.patientData
+        
+        return data != nil
     }
 }
